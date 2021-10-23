@@ -1,0 +1,32 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+**R Markdown Presentation and Plotly**
+
+**Author** --- Shivangi Mehta
+
+**Date** --- 10/23/2021
+
+**Instruction**
+
+Create a web page presentation using R Markdown that features a plot created with Plotly. Host your webpage on either GitHub Pages, RPubs, or NeoCities. Your webpage must contain the date that you created the document, and it must contain a plot created with Plotly. We would love to see you show off your creativity! Review criteria
+
+The rubric contains the following two questions:
+
+1.Does the web page feature a date and is this date less than two months before the date that you’re grading this assignment?
+2.Is the web page a presentation and does it feature an interactive plot that appears to have been created with Plotly?
+
+```{r, warning=FALSE}
+library(plotly)
+Product_a <- c(1:100)
+x <- Product_a
+x
+cost_of_product_a <- rnorm(100, mean=0)
+y <- cost_of_product_a
+data <- data.frame(x,y)
+p <- plot_ly(data, x = ~x, y = ~y, type = 'scatter', mode = 'lines')
+p
+```
